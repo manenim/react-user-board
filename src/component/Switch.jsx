@@ -12,21 +12,22 @@ function Switch({ setShowCountry, showCountry }) {
     }
   return (
     <>
-      <div className="">
+      <div className="flex">
         {/*   Switch Container */}
 
         <div
-          className="md:w-14 md:h-8 w-14 h-6 flex items-center bg-gray-400 rounded-full p-1 cursor-pointer"
+          className="md:w-14 md:h-8 w-14 h-6 flex items-center bg-[#b8e4e7] rounded-full p-1 cursor-pointer"
           onClick={handleToggle}
         >
           {/* Switch */}
           <div
             className={
-              "bg-black md:w-6 md:h-6 h-6 w-6 my-auto rounded-full shadow-md transform duration-300 ease-in-out" +
+              "bg-[#30bbb5] md:w-6 md:h-6 h-6 w-6 my-auto rounded-full shadow-md transform duration-300 ease-in-out" +
               (toggle ? null : toggleClass)
             }
           ></div>
         </div>
+          <p>Show Country</p>
       </div>
     </>
   );

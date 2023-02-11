@@ -6,7 +6,7 @@ const UserDetail = ({ user }) => {
   if(!user) return <h1>...loading</h1>
   
   return (
-      <div className="flex mt-6">
+      <div className="flex flex-col md:flex-row mt-6">
          <div className="user-img w-48 h-48 rounded-full bg-greenish border-greenish border-[6px]">
             <img src={user?.picture?.large} alt="" className="w-full h-full rounded-full object-cover" />
         </div>
