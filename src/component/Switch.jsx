@@ -27,7 +27,6 @@ function Switch({ setShowCountry, showCountry }) {
             }
           ></div>
         </div>
-          <p>Show Country</p>
       </div>
     </>
   );
