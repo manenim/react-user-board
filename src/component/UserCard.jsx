@@ -64,24 +64,22 @@ const UserCard = () => {
 
         {/* FILTER  */}
         <h3 className="text-[.9rem] w-[90%] pl-[5%]">Filter by</h3>
-        <div className="filter-options w-[90%] px-[5%] mt-4 flex items-center justify-between">
+        <div className="filter-options w-[90%] md:px-[5%] mt-4 flex flex-col md:flex-row items-center justify-between">
           <div className="rounded-[50px] flex items-center pl-4 bg-lightInput">
             <AiOutlineSearch className="text-2xl mr-2 text-[rgba(0,0,0,.5)]" />
             <input
               type="text"
-              className="w-[80%] outline-none border-none text-[rgba(0,0,0,1)] bg-transparent py-4"
+              className="w-[80%] outline-none border-none text-[rgba(0,0,0,1)] bg-transparent py-2 md:py-4"
               placeholder="Find a user"
             />
           </div>
-          {/* <div className=' flex rounded-[50px] items-center pl-4 bg-lightInput'> */}
-          {/* <input type="text" className='w-[80%] outline-none border-none text-[rgba(0,0,0,1)] bg-transparent py-4' placeholder='Find a user' /> */}
-
+          
+          <div className="flex items-center">
           <select
             id="countries"
-            className="bg-lightInput rounded-[50px] border border-gray-300 text-gray-900 text-sm focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            className="bg-lightInput rounded-[50px] border border-gray-300 text-gray-900 text-sm focus:ring-blue-500 focus:border-blue-500 block mt-4 md:mt-0 py-2 md:py-2.5 px-2 md:px-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             value={selectedCountry}
             onChange={handleCountryChange}
-            // defaultValue={'DEFAULT'}
           >
             <option value="DEFAULT">
               Choose a country
@@ -92,11 +90,11 @@ const UserCard = () => {
               </option>
             ))}
           </select>
-          {/* </div> */}
-          <div className="">
+          <div className="ml-4 md:ml-8 mt-3 md:mt-0">
             <Switch setShowCountry={setShowCountry} showCountry={showCountry} />
           </div>
-        </div>
+          </div>
+          </div>
 
         {/* USERS  */}
 

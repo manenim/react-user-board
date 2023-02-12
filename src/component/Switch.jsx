@@ -22,7 +22,7 @@ function Switch({ setShowCountry, showCountry }) {
           {/* Switch */}
           <div
             className={
-              "bg-[#30bbb5] md:w-6 md:h-6 h-6 w-6 my-auto rounded-full shadow-md transform duration-300 ease-in-out" +
+              "bg-[#30bbb5] md:w-6 md:h-6 h-6 w-6  md:my-auto rounded-full shadow-md transform duration-300 ease-in-out" +
               (toggle ? null : toggleClass)
             }
           ></div>
