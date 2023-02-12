@@ -11,11 +11,11 @@ const UserDetail = ({ user }) => {
             <img src={user?.picture?.large} alt="" className="w-full h-full rounded-full object-cover" />
         </div>
           <div className="details ml-8 mt-4">
-        <h3 className="font-bold text-[1.5rem]">{`${user ?user.name.title + " " + user.name.first + " " + user.name.last : ""}` } <span className="font-normal">55</span></h3>
-        <p className="mt-2 mb-1">{user && `${user.location.postcode}, ${user.location.city}, ${user.location.state}`}</p>
+        <h3 className="font-bold text-[1.5rem]">Emily Sanders<span className="font-normal">55</span></h3>
+        <p className="mt-2 mb-1">2479, Blessington, Wexford,</p>
               <div className="email flex items-center bg-[#d9d9e0] justify-center rounded-full py-1 my-4">
                 <HiOutlineMail className="text-[1.8rem] mr-1"/>
-                <p className="text-[14px]">{user && user.email}</p>
+                <p className="text-[14px]">laura.wood@example.com</p>
               </div>
               <p className="joined flex items-center bg-[#f7d9f2] justify-center rounded-full py-1 px-4 mb-8">
                   Joined: 2018-10-18T04:05:51.990z

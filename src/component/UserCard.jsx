@@ -78,11 +78,12 @@ const UserCard = () => {
 
           <select
             id="countries"
-            class="bg-lightInput rounded-[50px] border border-gray-300 text-gray-900 text-sm focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            className="bg-lightInput rounded-[50px] border border-gray-300 text-gray-900 text-sm focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             value={selectedCountry}
             onChange={handleCountryChange}
+            // defaultValue={'DEFAULT'}
           >
-            <option selected value="">
+            <option value="DEFAULT">
               Choose a country
             </option>
             {supportedCountries.map((country, index) => (
