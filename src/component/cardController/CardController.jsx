@@ -9,10 +9,11 @@ import UserContext from '../../context/UserContext'
 
 const CardController = () => {
 
-  const { dataa, getMaleUsers, getFemaleUsers, getAnyUsers } = useContext(UserContext)
+  const { getMaleUsers, getFemaleUsers, getAnyUsers, searchUser, setSearchUser } = useContext(UserContext)
 
-  console.log('lol', dataa)
-  
+const handleSearchInput = event => {
+    setSearchUser(event.target.value);
+  };  
  
   return (
     <div className=' md:w-full px-6 md:px-12 lg:px-0 lg:w-[40%] mt-[14%] lg:pr-0 sm:pr-[5%] md:pr-[10%]'>
@@ -22,7 +23,14 @@ const CardController = () => {
 
               <div className='w-full rounded-xl flex items-center pl-4 bg-input'>
                 <AiOutlineSearch className='text-3xl mr-2 text-[rgba(0,0,0,.5)]'/>
-                <input type="text" className='w-[80%] outline-none border-none text-[rgba(0,0,0,.5)] bg-transparent py-2 md:py-4 rounded-xl' placeholder='Find a user' />
+          <input
+            type="text"
+            className='w-[80%] outline-none border-none text-[rgba(0,0,0,.5)] bg-transparent py-2 md:py-4 rounded-xl'
+            placeholder='Find a user'
+            value={searchUser}
+            onChange={handleSearchInput}
+          
+          />
               </div>
 
               {/* FILTERS  */}

@@ -12,10 +12,9 @@ import User from "../user/User";
 import UsercardDetails from "../usercardDetails/UsercardDetails";
 
 const UserCard = () => {
-  const { dataa, handlePageLoad, handleDownload, getAnyUsers } =
+  const { dataa, handlePageLoad, handleDownload, getAnyUsers, searchUser, setSearchUser } =
     useContext(UserContext);
   const [showCountry, setShowCountry] = useState(false);
-  const [searchUser, setSearchUser] = useState("");
 
 
   // eslint-disable-next-line no-unused-vars
@@ -134,7 +133,7 @@ const UserCard = () => {
                   showCountry={showCountry}
                   handleDetails={handleDetails}
                   user={user}
-                />
+                /> || <h1>{`${searchUser} does not exist in the userbase` }</h1>
               );
             })
           ) : (

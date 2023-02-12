@@ -8,6 +8,8 @@ const UserContext = createContext();
 
 export const UserProvider = ({ children }) => {
   const [dataa, setDataa] = useState([]);
+  const [searchUser, setSearchUser] = useState("");
+
 
   const getMaleUsers = () => {
     getUsers(setDataa, {
@@ -40,6 +42,8 @@ export const UserProvider = ({ children }) => {
         handlePageLoad,
         getFemaleUsers,
         getAnyUsers,
+        searchUser,
+        setSearchUser,
       }}
     >
       {children}
