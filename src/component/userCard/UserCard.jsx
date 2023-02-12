@@ -81,7 +81,7 @@ const UserCard = () => {
             <AiOutlineSearch className="text-2xl mr-2 text-[rgba(0,0,0,.5)]" />
             <input
               type="text"
-              className="w-[80%] outline-none border-none text-[rgba(0,0,0,1)] bg-transparent py-2 md:py-4"
+              className="w-[80%] outline-none border-none text-[rgba(0,0,0,1)] bg-transparent py-0 md:py-4"
               placeholder="Find a user"
             />
           </div>
@@ -89,7 +89,7 @@ const UserCard = () => {
           <div className="flex items-center">
           <select
             id="countries"
-            className="bg-lightInput rounded-[50px] border border-gray-300 text-gray-900 text-sm focus:border-none block mt-4 md:mt-0 py-2 md:py-2.5 px-2 md:px-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            className="bg-lightInput rounded-[50px] border border-gray-300 text-gray-900 text-sm focus:border-none block mt-4 md:mt-0 py-2 md:py-3 px-2 md:px-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             value={selectedCountry}
             onChange={handleCountryChange}
           >
