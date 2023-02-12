@@ -12,7 +12,7 @@ function Switch({ setShowCountry, showCountry }) {
     }
   return (
     <>
-      <div className="flex">
+      <div className="flex justify-between items-center w-36">
         {/*   Switch Container */}
 
         <div
@@ -27,6 +27,7 @@ function Switch({ setShowCountry, showCountry }) {
             }
           ></div>
         </div>
+        <p className="ml-2">Show Country</p>
       </div>
     </>
   );

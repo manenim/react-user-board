@@ -47,7 +47,6 @@ const UserCard = () => {
           indexOfLastPost
         ); // 0 to 10
         handlePageLoad(dataaa);
-        // handlePageLoad(res.data.results)
       })
       .catch((err) => console.log(err));
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -64,8 +63,8 @@ const UserCard = () => {
 
         {/* FILTER  */}
         <h3 className="text-[.9rem] w-[90%] pl-[5%]">Filter by</h3>
-        <div className="filter-options w-[90%] md:px-[5%] mt-4 flex flex-col md:flex-row items-center justify-between">
-          <div className="rounded-[50px] flex items-center pl-4 bg-lightInput">
+        <div className="filter-options w-[96%] md:px-[2%] mt-4 flex flex-col md:flex-row items-center justify-between">
+          <div className="rounded-[50px] ml-[-4rem] md:ml-0 flex items-center pl-4 bg-lightInput">
             <AiOutlineSearch className="text-2xl mr-2 text-[rgba(0,0,0,.5)]" />
             <input
               type="text"
@@ -90,7 +89,7 @@ const UserCard = () => {
               </option>
             ))}
           </select>
-          <div className="ml-4 md:ml-8 mt-3 md:mt-0">
+          <div className="ml-4 md:ml-4 mt-3 md:mt-0">
             <Switch setShowCountry={setShowCountry} showCountry={showCountry} />
           </div>
           </div>
