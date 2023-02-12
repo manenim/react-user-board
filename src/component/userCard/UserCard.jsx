@@ -15,6 +15,8 @@ const UserCard = () => {
   const { dataa, handlePageLoad, handleDownload, getAnyUsers } =
     useContext(UserContext);
   const [showCountry, setShowCountry] = useState(false);
+  const [searchUser, setSearchUser] = useState("");
+
 
   // eslint-disable-next-line no-unused-vars
   const [currentPage, setCurrentPage] = useState(1);
@@ -63,6 +65,16 @@ const UserCard = () => {
     }).then((users) => {
       handlePageLoad(users);
     });
+   };
+  
+  //filter results based on search input
+  const isSearched = (searchTerm) => (item) =>
+    item.name.first.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    item.name.last.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    item.email.toLowerCase().includes(searchTerm.toLowerCase());
+  
+   const handleSearchInput = event => {
+    setSearchUser(event.target.value);
   };
 
   return (
@@ -81,6 +93,8 @@ const UserCard = () => {
             <AiOutlineSearch className="text-2xl mr-2 text-[rgba(0,0,0,.5)]" />
             <input
               type="text"
+              value={searchUser}
+              onChange={handleSearchInput}
               className="w-[80%] outline-none border-none text-[rgba(0,0,0,1)] bg-transparent py-0 md:py-4"
               placeholder="Find a user"
             />
@@ -112,7 +126,7 @@ const UserCard = () => {
 
         <div className="users mt-10 bg-white ">
           {dataa ? (
-            dataa.map((user, index) => {
+            dataa.filter(isSearched(searchUser)).map((user, index) => {
               return (
                 <User
                   key={index}
