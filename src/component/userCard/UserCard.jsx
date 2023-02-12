@@ -94,11 +94,12 @@ const UserCard = () => {
               type="text"
               value={searchUser}
               onChange={handleSearchInput}
-              className="w-[80%] outline-none border-none text-[rgba(0,0,0,1)] bg-transparent py-0 md:py-4"
+              className="w-[80%] outline-none border-none text-[rgba(0,0,0,1)] bg-transparent py-2 md:py-4"
               placeholder="Find a user"
             />
           </div>
           
+          {/* SELECT COUNTRY  */}
           <div className="flex items-center">
           <select
             id="countries"
