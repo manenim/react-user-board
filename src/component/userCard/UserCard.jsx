@@ -5,6 +5,7 @@ import { FiDownloadCloud } from "react-icons/fi";
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi";
 import UserContext from "../../context/UserContext";
 import supportedCountries from "../../data/supportedCountries";
+import baseUserSearch from "../../services/baseUserSearch";
 import Switch from "../switch/Switch";
 
 import User from "../user/User";
@@ -27,7 +28,9 @@ const UserCard = () => {
   const [selectedCountry, setSelectedCountry] = useState("");
 
   const handleCountryChange = (event) => {
+    console.log("country changed to ->", event.target.value);
     setSelectedCountry(event.target.value);
+    updatePageWithParams();
   };
 
   const handleDetails = () => {
@@ -51,6 +54,16 @@ const UserCard = () => {
       .catch((err) => console.log(err));
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+
+   const updatePageWithParams = () => {
+    baseUserSearch({
+      page: currentPage,
+      country_code: selectedCountry,
+    }).then((users) => {
+      handlePageLoad(users);
+    });
+  };
 
   return (
     <div className="md:w-full lg:w-[50%]  relative bg-light mt-[10%] lg:mr-12 rounded-3xl overflow-hidden flex">
@@ -76,7 +89,7 @@ const UserCard = () => {
           <div className="flex items-center">
           <select
             id="countries"
-            className="bg-lightInput rounded-[50px] border border-gray-300 text-gray-900 text-sm focus:ring-blue-500 focus:border-blue-500 block mt-4 md:mt-0 py-2 md:py-2.5 px-2 md:px-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            className="bg-lightInput rounded-[50px] border border-gray-300 text-gray-900 text-sm focus:border-none block mt-4 md:mt-0 py-2 md:py-2.5 px-2 md:px-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             value={selectedCountry}
             onChange={handleCountryChange}
           >
@@ -115,6 +128,10 @@ const UserCard = () => {
           )}
         </div>
 
+
+          
+        {/* CTA  AND CHEVRON */}
+
         <div className="cta w-[90%] pl-[5%] flex flex-col md:flex-row items-center justify-between mt-8 mb-4">
           <button
             onClick={handleDownload}
@@ -139,6 +156,10 @@ const UserCard = () => {
           </div>
         </div>
       </div>
+
+      
+      {/* USER DETAILS */}
+
       <UsercardDetails
         user={user}
         showDetails={showDetails}
