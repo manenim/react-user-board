@@ -31,7 +31,7 @@ const UsercardDetails = ({ showDetails, setShowDetails, user }) => {
                 </div>
               </div>
       
-            <div onClick = {() => setShowDetails(show => !show)} className="back rounded-full inline-flex mt-6 items-center px-4 py-2  hover:bg-greyish cursor-pointer ease-out duration-300 ">
+            <div onClick = {() => setShowDetails(show => !show)} className="back rounded-full inline-flex mt-6 items-center px-4 py-2  hover:bg-[rgba(99,97,97,.1)] cursor-pointer ease-out duration-300 ">
               <BiArrowBack className='mr-2 text-[1.2rem]' />
               <h3>RESULTS</h3>
             </div>

@@ -8,12 +8,12 @@ const UserDetail = ({ user }) => {
   return (
       <div className="flex flex-col md:flex-row mt-6">
          <div className="user-img w-48 h-48 rounded-full bg-greenish border-greenish border-[6px]">
-            <img src={user?.picture?.large} alt="" className="w-full h-full rounded-full object-cover" />
+            <img src={user?.picture?.large} alt="user" className="w-full h-full rounded-full object-cover" />
         </div>
           <div className="details ml-8 mt-4">
         <h3 className="font-bold text-[1.5rem]">{user?.name?.first + " " + user?.name?.last}<span className="font-normal">55</span></h3>
         <p className="mt-2 mb-1">
-                    {`${user?.location?.postcode}, ${user?.location?.city}, ${user?.location?.state}`}
+            {`${user?.location?.postcode}, ${user?.location?.city}, ${user?.location?.state}`}
 
         </p>
               <div className="email flex items-center bg-[#d9d9e0] justify-center rounded-full py-1 my-4">
