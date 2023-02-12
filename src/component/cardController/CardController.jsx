@@ -3,7 +3,7 @@ import {BiMale} from 'react-icons/bi'
 import { FaFemale } from 'react-icons/fa'
 import { AiOutlineSearch } from 'react-icons/ai'
 import { useContext } from 'react'
-import UserContext from '../context/UserContext'
+import UserContext from '../../context/UserContext'
 
 
 

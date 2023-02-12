@@ -3,12 +3,12 @@ import { useContext, useEffect, useState } from "react";
 import { AiOutlineSearch } from "react-icons/ai";
 import { FiDownloadCloud } from "react-icons/fi";
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi";
-import UserContext from "../context/UserContext";
-import supportedCountries from "../data/supportedCountries";
-import Switch from "./Switch";
+import UserContext from "../../context/UserContext";
+import supportedCountries from "../../data/supportedCountries";
+import Switch from "../switch/Switch";
 
-import User from "./User";
-import UsercardDetails from "./UsercardDetails";
+import User from "../user/User";
+import UsercardDetails from "../usercardDetails/UsercardDetails";
 
 const UserCard = () => {
   const { dataa, handlePageLoad, handleDownload, getAnyUsers } =

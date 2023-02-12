@@ -1,5 +1,5 @@
-import CardController from "./component/CardController";
-import UserCard from "./component/UserCard";
+import CardController from "./component/cardController/CardController";
+import UserCard from "./component/userCard/UserCard";
 
 
 

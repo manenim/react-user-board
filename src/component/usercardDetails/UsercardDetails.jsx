@@ -3,8 +3,8 @@ import { AiOutlineSearch } from 'react-icons/ai'
 import { BiArrowBack } from 'react-icons/bi'
 import { FiDownloadCloud } from 'react-icons/fi'
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi'
-import UserContext from '../context/UserContext'
-import UserDetail from './UserDetail'
+import UserContext from '../../context/UserContext'
+import UserDetail from '../userDetail/UserDetail'
 
 const UsercardDetails = ({ showDetails, setShowDetails, user }) => {
    const {  handleDownload, getAnyUsers } =
@@ -31,7 +31,7 @@ const UsercardDetails = ({ showDetails, setShowDetails, user }) => {
                 </div>
               </div>
       
-            <div onClick = {() => setShowDetails(show => !show)} className="back inline-flex mt-6 items-center px-4 py-2 hover:bg-greyish cursor-pointer ease-out duration-300 ">
+            <div onClick = {() => setShowDetails(show => !show)} className="back rounded-full inline-flex mt-6 items-center px-4 py-2  hover:bg-greyish cursor-pointer ease-out duration-300 ">
               <BiArrowBack className='mr-2 text-[1.2rem]' />
               <h3>RESULTS</h3>
             </div>
